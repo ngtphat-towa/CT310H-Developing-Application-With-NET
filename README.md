@@ -89,4 +89,3 @@ This course is offered at Can Tho University. For the full course outline, pleas
 - Participate in online forums and communities.
 - Seek help from lecturers and teaching assistants.
 
-This README.md serves as a starting point for students enrolled in the "Developing Applications with .NET (CT31OH)" course. Remember to consult the detailed syllabus and course materials for further information and specific requirements.
