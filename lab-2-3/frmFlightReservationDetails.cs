@@ -17,6 +17,10 @@ namespace lab_2_3
             dpkerFightDate.Value = DateTime.Now;
             cbFlightClass.SelectedIndex = 0;
             chkListServices.ClearSelected();
+            foreach (int i in chkListServices.CheckedIndices)
+            {
+                chkListServices.SetItemChecked(i, false);
+            }
         }
 
         private void btnVeritfy_Click(object sender, EventArgs e)

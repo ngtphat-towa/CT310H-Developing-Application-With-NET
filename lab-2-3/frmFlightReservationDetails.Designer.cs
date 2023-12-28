@@ -268,7 +268,6 @@
             cbFlightClass.Name = "cbFlightClass";
             cbFlightClass.Size = new Size(289, 31);
             cbFlightClass.TabIndex = 14;
-            cbFlightClass.SelectedIndex = 0;
             // 
             // label6
             // 
@@ -282,6 +281,7 @@
             // 
             // chkListServices
             // 
+            chkListServices.CheckOnClick = true;
             chkListServices.FormattingEnabled = true;
             chkListServices.Items.AddRange(new object[] { "Window Seat", "Aisle Seat", "Extra Legroom Seat", "Preferred Seating (specific seat number/location)", "Standard Meal", "Vegetarian Meal", "In-Flight Entertainment (movies, TV shows, music)", "Wi-Fi Access", "Blanket and Pillow", "Travel Kit (earplugs, eye mask, toothbrush)" });
             chkListServices.Location = new Point(159, 574);
