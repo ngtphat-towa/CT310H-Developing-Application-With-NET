@@ -19,12 +19,16 @@ namespace Lab03
         {
             try
             {
-                _bookSale = new();
-                _bookSale.Title = txtTitle.Text ?? "";
-                _bookSale.Price = decimal.Parse(txtPrice.Text);
-                _bookSale.Quantity = int.Parse(txtQuantity.Text);
-
-                txtTotal.Text = _bookSale.ExtentedPrice.ToString("C");
+                _bookSale = new BookSale
+                (
+                    title: txtTitle.Text ?? "",
+                    quantity: int.Parse(txtQuantity.Text),
+                    price: decimal.Parse(txtPrice.Text),
+                    isDiscount: cbIsNormalDiscount.Checked
+                );
+                txtExtendedPrice.Text = _bookSale.ExtentedPrice.ToString("C");
+                txtDiscount.Text = _bookSale.DiscountAmount.ToString("C");
+                txtNetDue.Text = _bookSale.NetDue.ToString("C");
             }
             catch (Exception ex)
             {
@@ -42,8 +46,20 @@ namespace Lab03
             txtTitle.Text = "";
             txtQuantity.Text = "";
             txtPrice.Text = "";
-            txtTotal.Text = "";
-            //chkStudentDiscount.Checked = false;
+            txtExtendedPrice.Text = "";
+            cbIsNormalDiscount.Checked = false;
+            txtExtendedPrice.Text = "";
+            txtDiscount.Text = "";
+            txtNetDue.Text = "";
+        }
+
+        private void menuBtnSummary_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Total sales: {BookSale.SaleCount}\nTotal amount: {BookSale.TotalSales:C}", "Sales Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void cbIsNormalDiscount_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
