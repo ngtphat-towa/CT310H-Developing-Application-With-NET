@@ -19,12 +19,13 @@ namespace Lab03
         {
             try
             {
-                _bookSale = new BookSale
+                _bookSale = new StudentBookSale
                 (
                     title: txtTitle.Text ?? "",
                     quantity: int.Parse(txtQuantity.Text),
                     price: decimal.Parse(txtPrice.Text),
-                    isDiscount: cbIsNormalDiscount.Checked
+                    isDiscount: cbIsNormalDiscount.Checked,
+                    isStudent: cbIsStudent.Checked
                 );
                 txtExtendedPrice.Text = _bookSale.ExtentedPrice.ToString("C");
                 txtDiscount.Text = _bookSale.DiscountAmount.ToString("C");

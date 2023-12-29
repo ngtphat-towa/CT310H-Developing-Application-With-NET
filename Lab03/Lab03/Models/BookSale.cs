@@ -2,8 +2,11 @@
 {
     internal class BookSale
     {
-        public BookSale(string title, int quantity, decimal price, bool isDiscount)
-        {
+        public BookSale(string title,
+                        int quantity,
+                        decimal price,
+                        bool isDiscount
+        ){
             this.title = title;
             this.quantity = quantity;
             this.price = price;
@@ -20,7 +23,7 @@
 
 
 
-        public decimal DiscountAmount => IsDiscount 
+        public virtual decimal DiscountAmount => IsDiscount 
                 ? Quantity * Price * DISCOUNT_RATE 
                 : 0M;
         public decimal ExtentedPrice => Quantity * Price;

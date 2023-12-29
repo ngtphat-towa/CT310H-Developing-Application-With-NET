@@ -37,6 +37,7 @@
             tbLayoutMain = new TableLayoutPanel();
             gbBookInfo = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
+            cbIsStudent = new CheckBox();
             label2 = new Label();
             lbDiscount = new Label();
             txtTitle = new TextBox();
@@ -138,6 +139,7 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel1.Controls.Add(cbIsStudent, 1, 9);
             tableLayoutPanel1.Controls.Add(label2, 0, 10);
             tableLayoutPanel1.Controls.Add(lbDiscount, 0, 8);
             tableLayoutPanel1.Controls.Add(txtTitle, 1, 0);
@@ -173,6 +175,18 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 1F));
             tableLayoutPanel1.Size = new Size(716, 415);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // cbIsStudent
+            // 
+            cbIsStudent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cbIsStudent.AutoSize = true;
+            cbIsStudent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cbIsStudent.Location = new Point(557, 329);
+            cbIsStudent.Name = "cbIsStudent";
+            cbIsStudent.Size = new Size(136, 20);
+            cbIsStudent.TabIndex = 9;
+            cbIsStudent.Text = "Distinct Student";
+            cbIsStudent.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -366,5 +380,6 @@
         private Label label2;
         private TextBox txtDiscount;
         private TextBox txtNetDue;
+        private CheckBox cbIsStudent;
     }
 }
