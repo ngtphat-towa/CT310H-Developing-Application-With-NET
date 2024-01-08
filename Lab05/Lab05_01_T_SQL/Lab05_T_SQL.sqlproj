@@ -60,15 +60,18 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
-    <Folder Include="publish\" />
+    <Folder Include="PublishLocations" />
+    <Folder Include="Updates" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\DailyCustomer.sql" />
     <Build Include="dbo\Tables\Product.sql" />
     <Build Include="dbo\Tables\Sales.sql" />
     <Build Include="dbo\Tables\ProductImports.sql" />
+    <Build Include="dbo\Tables\ProductCategories.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="publish\Lab05_T_SQL.publish.xml" />
+    <None Include="PublishLocations\Lab05_T_SQL.publish.xml" />
+    <None Include="Updates\Part2.sql" />
   </ItemGroup>
 </Project>
