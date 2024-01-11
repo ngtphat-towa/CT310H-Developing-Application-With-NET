@@ -64,6 +64,7 @@
     <Folder Include="Updates" />
     <Folder Include="Updates\Vietnamese" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Functions\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Product.sql" />
@@ -76,6 +77,8 @@
     <Build Include="dbo\Stored Procedures\spDeleteProductWithRelatedData.sql" />
     <Build Include="dbo\Stored Procedures\spCalculateStock.sql" />
     <Build Include="dbo\Stored Procedures\spCalculateInventory.sql" />
+    <Build Include="dbo\Tables\Account.sql" />
+    <Build Include="dbo\Functions\modulo11_check.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\Lab05_T_SQL.publish.xml" />
@@ -84,5 +87,6 @@
     <None Include="Updates\Part3.sql" />
     <None Include="Updates\Part4.sql" />
     <None Include="Updates\Part5.sql" />
+    <None Include="Updates\Part8.sql" />
   </ItemGroup>
 </Project>
