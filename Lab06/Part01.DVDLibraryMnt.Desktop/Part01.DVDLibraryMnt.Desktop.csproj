@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db\DVDDatabase.cs" />
     <Compile Include="DVDLibraryForm.cs">
       <SubType>Form</SubType>
     </Compile>

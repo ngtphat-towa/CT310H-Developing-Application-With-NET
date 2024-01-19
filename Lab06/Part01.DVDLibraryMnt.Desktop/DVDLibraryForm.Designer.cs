@@ -38,21 +38,21 @@
             this.lblLang = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.gbSubtitle = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.rbtnYes = new System.Windows.Forms.RadioButton();
+            this.rbtnNo = new System.Windows.Forms.RadioButton();
             this.cboLang = new System.Windows.Forms.ComboBox();
             this.updPrice = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.rbtnYes = new System.Windows.Forms.RadioButton();
-            this.rbtnNo = new System.Windows.Forms.RadioButton();
             this.tlMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.gbSubtitle.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updPrice)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlMain
@@ -176,7 +176,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(3, 158);
+            this.lblPrice.Location = new System.Drawing.Point(3, 164);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(51, 22);
             this.lblPrice.TabIndex = 5;
@@ -189,13 +189,57 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbSubtitle.Controls.Add(this.tableLayoutPanel3);
-            this.gbSubtitle.Location = new System.Drawing.Point(194, 209);
+            this.gbSubtitle.Location = new System.Drawing.Point(194, 221);
             this.gbSubtitle.Name = "gbSubtitle";
             this.gbSubtitle.Padding = new System.Windows.Forms.Padding(3, 3, 100, 3);
             this.gbSubtitle.Size = new System.Drawing.Size(351, 85);
             this.gbSubtitle.TabIndex = 6;
             this.gbSubtitle.TabStop = false;
             this.gbSubtitle.Text = "Subtile";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.rbtnYes, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rbtnNo, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 58);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // rbtnYes
+            // 
+            this.rbtnYes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.rbtnYes.AutoSize = true;
+            this.rbtnYes.Location = new System.Drawing.Point(3, 3);
+            this.rbtnYes.Name = "rbtnYes";
+            this.rbtnYes.Size = new System.Drawing.Size(62, 52);
+            this.rbtnYes.TabIndex = 0;
+            this.rbtnYes.TabStop = true;
+            this.rbtnYes.Text = "Yes";
+            this.rbtnYes.UseVisualStyleBackColor = true;
+            this.rbtnYes.CheckedChanged += new System.EventHandler(this.rbtnYes_CheckedChanged);
+            // 
+            // rbtnNo
+            // 
+            this.rbtnNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.rbtnNo.AutoSize = true;
+            this.rbtnNo.Location = new System.Drawing.Point(127, 3);
+            this.rbtnNo.Name = "rbtnNo";
+            this.rbtnNo.Size = new System.Drawing.Size(54, 52);
+            this.rbtnNo.TabIndex = 1;
+            this.rbtnNo.TabStop = true;
+            this.rbtnNo.Text = "No";
+            this.rbtnNo.UseVisualStyleBackColor = true;
+            this.rbtnNo.CheckedChanged += new System.EventHandler(this.rbtnNo_CheckedChanged);
             // 
             // cboLang
             // 
@@ -214,17 +258,19 @@
             this.cboLang.Name = "cboLang";
             this.cboLang.Size = new System.Drawing.Size(254, 30);
             this.cboLang.TabIndex = 7;
+            this.cboLang.SelectedIndexChanged += new System.EventHandler(this.cboLang_SelectedIndexChanged);
             // 
             // updPrice
             // 
             this.updPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.updPrice.Location = new System.Drawing.Point(194, 161);
+            this.updPrice.Location = new System.Drawing.Point(194, 167);
             this.updPrice.Margin = new System.Windows.Forms.Padding(3, 3, 100, 3);
             this.updPrice.Name = "updPrice";
             this.updPrice.Size = new System.Drawing.Size(254, 28);
             this.updPrice.TabIndex = 8;
+            this.updPrice.ValueChanged += new System.EventHandler(this.updPrice_ValueChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -257,6 +303,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add New";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnSave
             // 
@@ -270,6 +317,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -283,48 +331,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.rbtnYes, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.rbtnNo, 1, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 24);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 58);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // rbtnYes
-            // 
-            this.rbtnYes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.rbtnYes.AutoSize = true;
-            this.rbtnYes.Location = new System.Drawing.Point(3, 3);
-            this.rbtnYes.Name = "rbtnYes";
-            this.rbtnYes.Size = new System.Drawing.Size(62, 52);
-            this.rbtnYes.TabIndex = 0;
-            this.rbtnYes.TabStop = true;
-            this.rbtnYes.Text = "Yes";
-            this.rbtnYes.UseVisualStyleBackColor = true;
-            // 
-            // rbtnNo
-            // 
-            this.rbtnNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.rbtnNo.AutoSize = true;
-            this.rbtnNo.Location = new System.Drawing.Point(127, 3);
-            this.rbtnNo.Name = "rbtnNo";
-            this.rbtnNo.Size = new System.Drawing.Size(54, 52);
-            this.rbtnNo.TabIndex = 1;
-            this.rbtnNo.TabStop = true;
-            this.rbtnNo.Text = "No";
-            this.rbtnNo.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // DVDLibraryForm
             // 
@@ -334,7 +341,7 @@
             this.ClientSize = new System.Drawing.Size(608, 513);
             this.Controls.Add(this.tlMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(626, 560);
             this.Name = "DVDLibraryForm";
             this.Text = "DVD Library";
@@ -343,10 +350,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.gbSubtitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updPrice)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
