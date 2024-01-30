@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [mylogin]
+    WITH PASSWORD = N'gIL9tkapbhbsyllSwqqzvp!amsFT7_&#$!~<dUKlWtjd{3ii', SID = 0x27F8F19E6599B541B2FA47AF541A17B8, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
