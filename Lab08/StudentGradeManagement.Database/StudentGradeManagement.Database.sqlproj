@@ -60,6 +60,11 @@
     <Folder Include="Properties" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\StoredProcedures" />
+    <Folder Include="dbo\StoredProcedures\Department" />
+    <Folder Include="dbo\StoredProcedures\Class" />
+    <Folder Include="dbo\StoredProcedures\Course" />
+    <Folder Include="dbo\StoredProcedures\Intructor" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Department.sql" />
@@ -74,8 +79,19 @@
     <Build Include="dbo\Tables\Enrollments.sql" />
     <Build Include="dbo\Tables\Teaches.sql" />
     <Build Include="dbo\Tables\Grades.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_GetSingle.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_GetSingle.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_Update.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_Create.sql" />
+    <Build Include="dbo\StoredProcedures\Intructor\spIntructor_GetSingle.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StudentGradeManagement.Database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment.sql" />
   </ItemGroup>
 </Project>

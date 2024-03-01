@@ -8,4 +8,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StudentGradeManagement.Library\StudentGradeManagement.Library.csproj" />
+  </ItemGroup>
+
 </Project>

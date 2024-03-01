@@ -1,3 +1,8 @@
+using StudentGradeManagement.Desktop.Presenter;
+using StudentGradeManagement.Library.Model;
+using StudentGradeManagement.Library.Repositories;
+using StudentGradeManagement.Library.View;
+
 namespace StudentGradeManagement.Desktop
 {
     internal static class Program
@@ -11,7 +16,13 @@ namespace StudentGradeManagement.Desktop
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            
+            var loginView = new LoginForm();
+           
+            var intructorRepository = new InstructorRepository();
+            var loginPresenter = new LoginPresenter(loginView, intructorRepository);
+            loginPresenter.ShowView();
         }
     }
 }

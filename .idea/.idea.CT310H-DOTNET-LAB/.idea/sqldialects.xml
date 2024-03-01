@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Functions/modulo11_check.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Stored Procedures/spCalculateInventory.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Stored Procedures/spCalculateStock.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Stored Procedures/spDeleteProductWithRelatedData.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Stored Procedures/spGetStockByBranchId.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Stored Procedures/spSellingProduct.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/Account.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/Branch.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/Product.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/ProductCategories.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/ProductImports.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab05/Lab05_01_T_SQL/dbo/Tables/Sales.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Lab_HotelRoomPayment.DB/Security/mylogin.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Lab_HotelRoomPayment.DB/Security/mylogin_1.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Lab_HotelRoomPayment.DB/dbo/Tables/Guests.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Lab_HotelRoomPayment.DB/dbo/Tables/Rooms.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Part01.DVDLibraryMnt.Database/dbo/Tables/DVDLibrary.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Part02.StaffManagement.DBase/dbo/Stored Procedures/GetLatestStaffCode.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Part02.StaffManagement.DBase/dbo/Tables/Position.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab06/Part02.StaffManagement.DBase/dbo/Tables/Staff.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Class/spClass_Create.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Class/spClass_Delete.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Class/spClass_GetAll.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Class/spClass_GetSingle.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Class/spClass_Update.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Department/spDepartment_GetAll.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/StoredProcedures/Department/spDepartment_GetSingle.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/AcademicYears.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Class.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Course.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Department.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Enrollments.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/EvaluationMethod.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Grades.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Instructor.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Sections.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Student.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/Teaches.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/Lab08/StudentGradeManagement.Database/dbo/Tables/TimeSlots.sql" dialect="TSQL" />
+  </component>
+</project>
