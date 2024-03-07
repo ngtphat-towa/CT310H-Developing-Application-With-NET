@@ -8,6 +8,8 @@ namespace StudentGradeManagement.Desktop
         public string InstructorId { get => txtInstructorId.Text; set => txtInstructorId.Text = value; }
         public string Password { get => txtPassword.Text; set => txtPassword.Text = value; }
 
+        public IDashboardView? DashboardView => DashboardForm.GetDashboardView();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -37,14 +39,24 @@ namespace StudentGradeManagement.Desktop
             MessageBox.Show(message);
         }
 
-        public void OpenView()
+        public void ShowView()
         {
-            Application.Run(this);
+            this.Show();
         }
 
         public void CloseView()
         {
             this.Close();
+        }
+
+        public void HideView()
+        {
+            this.Hide();
+        }
+
+        public void OpenView()
+        {
+            Application.Run(this);
         }
     }
 }

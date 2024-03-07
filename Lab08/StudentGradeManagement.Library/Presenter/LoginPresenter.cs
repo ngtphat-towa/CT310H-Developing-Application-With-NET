@@ -1,7 +1,7 @@
 ﻿using StudentGradeManagement.Library.Model;
+using StudentGradeManagement.Library.Presenter;
 using StudentGradeManagement.Library.Repositories.Contracts;
 using StudentGradeManagement.Library.View;
-using System.ComponentModel.DataAnnotations;
 
 namespace StudentGradeManagement.Desktop.Presenter
 {
@@ -17,6 +17,10 @@ namespace StudentGradeManagement.Desktop.Presenter
             _view = view ?? throw new ArgumentNullException(nameof(view));
             _view.LoginClicked += OnLoginClicked!;
             _view.ClearClicked += OnClearClicked!;
+
+            // TODO: This is for testing only
+            _view.InstructorId = "001";
+            _view.Password = "123";
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
@@ -44,9 +48,15 @@ namespace StudentGradeManagement.Desktop.Presenter
                 _view.ShowMessage("The password is invalid!");
                 return;
             }
-            // TODO: show message login succesful and open main view
+            ShowDashboardView();
         }
-
+        private void ShowDashboardView()
+        {
+            _view.HideView();
+            var dashboardPresenter = new DashboardPresenter(_view.DashboardView!);
+            _view.DashboardView!.setLoginView(_view);
+            dashboardPresenter.ShowView();
+        }
         private void OnClearClicked(object sender, EventArgs e)
         {
             _view.ClearFields();

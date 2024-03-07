@@ -2,13 +2,10 @@
 using StudentGradeManagement.Library.Model;
 using StudentGradeManagement.Library.Repositories.Contracts;
 
-
-
 namespace StudentGradeManagement.Library.Repositories
 {
     public class InstructorRepository : IBaseRepository<Instructor>
     {
-
 
     public Task<dynamic> CreateAsync(Instructor entity)
             => DataAccessHelper.ExecuteStoredProcedure("spIntructor_Insert", entity);

@@ -1,7 +1,5 @@
 using StudentGradeManagement.Desktop.Presenter;
-using StudentGradeManagement.Library.Model;
 using StudentGradeManagement.Library.Repositories;
-using StudentGradeManagement.Library.View;
 
 namespace StudentGradeManagement.Desktop
 {

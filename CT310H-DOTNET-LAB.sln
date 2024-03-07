@@ -39,7 +39,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentGradeManagement.Desk
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StudentGradeManagement.Database", "Lab08\StudentGradeManagement.Database\StudentGradeManagement.Database.sqlproj", "{769CB8C9-E7E9-45A6-9A77-E4F27F994BCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGradeManagement.Library", "Lab08\StudentGradeManagement.Library\StudentGradeManagement.Library.csproj", "{FB8F527F-6A63-4481-9FD6-C2D1168C317F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentGradeManagement.Library", "Lab08\StudentGradeManagement.Library\StudentGradeManagement.Library.csproj", "{FB8F527F-6A63-4481-9FD6-C2D1168C317F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42F4160F-98F7-4F37-8F27-E22E85E7BA0D}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
