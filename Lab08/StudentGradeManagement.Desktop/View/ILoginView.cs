@@ -11,10 +11,7 @@
         // Functions
         void ClearFields();
         void ShowMessage(string message);
-        void HideView();
-        void OpenView();
-        // Views
-        IDashboardView? DashboardView { get; }
+  
     }
 
 }

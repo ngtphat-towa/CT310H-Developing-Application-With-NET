@@ -9,9 +9,9 @@ namespace StudentGradeManagement.Desktop
             InitializeComponent();
         }
 
-        public string DepartmentId { get => txtDepartmentId.Text; set => txtDepartmentId.Text=value; }
+        public string DepartmentId { get => txtDepartmentId.Text; set => txtDepartmentId.Text = value; }
         public string DepartmentName { get => txtDepartmentName.Text; set => txtDepartmentName.Text = value; }
-        public string? Building { get => cbBuilding.SelectedText; set =>cbBuilding.SelectedText=value; }
+        public string? Building { get => cbBuilding.SelectedText; set => cbBuilding.SelectedText = value; }
 
         public event EventHandler? SearchEvent;
         public event EventHandler? AddNewEvent;
@@ -20,14 +20,14 @@ namespace StudentGradeManagement.Desktop
         public event EventHandler? SaveEvent;
         public event EventHandler? CancelEvent;
 
-        public void CloseView()
-        {
-            this.Dispose();
-        }
-
         public void ShowView()
         {
             this.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

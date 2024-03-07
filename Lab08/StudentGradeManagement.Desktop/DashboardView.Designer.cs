@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             logoutToolStripMenuItem = new ToolStripMenuItem();
-            mainPanel = new Panel();
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
+            manageDepartmentToolStripMenuItem = new ToolStripMenuItem();
             manageSubjectToolStripMenuItem = new ToolStripMenuItem();
             mangeScoreToolStripMenuItem = new ToolStripMenuItem();
             manageStudentToolStripMenuItem = new ToolStripMenuItem();
             manageIntructorToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem1 = new ToolStripMenuItem();
-            mainPanel.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -47,23 +46,14 @@
             logoutToolStripMenuItem.Size = new Size(224, 26);
             logoutToolStripMenuItem.Text = "Logout";
             // 
-            // mainPanel
-            // 
-            mainPanel.Controls.Add(menuStrip1);
-            mainPanel.Dock = DockStyle.Fill;
-            mainPanel.Location = new Point(0, 0);
-            mainPanel.Name = "mainPanel";
-            mainPanel.Size = new Size(1262, 673);
-            mainPanel.TabIndex = 1;
-            // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, manageSubjectToolStripMenuItem, mangeScoreToolStripMenuItem, manageStudentToolStripMenuItem, manageIntructorToolStripMenuItem, logOutToolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, manageDepartmentToolStripMenuItem, manageSubjectToolStripMenuItem, mangeScoreToolStripMenuItem, manageStudentToolStripMenuItem, manageIntructorToolStripMenuItem, logOutToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1262, 28);
-            menuStrip1.TabIndex = 0;
+            menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
@@ -72,64 +62,68 @@
             menuToolStripMenuItem.Size = new Size(60, 24);
             menuToolStripMenuItem.Text = "Menu";
             // 
+            // manageDepartmentToolStripMenuItem
+            // 
+            manageDepartmentToolStripMenuItem.Name = "manageDepartmentToolStripMenuItem";
+            manageDepartmentToolStripMenuItem.Size = new Size(161, 24);
+            manageDepartmentToolStripMenuItem.Text = "Manage Department";
+            manageDepartmentToolStripMenuItem.Click += manageDepartmentToolStripMenuItem_Click;
+            // 
             // manageSubjectToolStripMenuItem
             // 
             manageSubjectToolStripMenuItem.Name = "manageSubjectToolStripMenuItem";
             manageSubjectToolStripMenuItem.Size = new Size(130, 24);
             manageSubjectToolStripMenuItem.Text = "Manage Subject";
-            manageSubjectToolStripMenuItem.Click += manageSubjectToolStripMenuItem_Click;
             // 
             // mangeScoreToolStripMenuItem
             // 
             mangeScoreToolStripMenuItem.Name = "mangeScoreToolStripMenuItem";
             mangeScoreToolStripMenuItem.Size = new Size(110, 24);
             mangeScoreToolStripMenuItem.Text = "Mange Score";
-            mangeScoreToolStripMenuItem.Click += mangeScoreToolStripMenuItem_Click;
             // 
             // manageStudentToolStripMenuItem
             // 
             manageStudentToolStripMenuItem.Name = "manageStudentToolStripMenuItem";
             manageStudentToolStripMenuItem.Size = new Size(132, 24);
             manageStudentToolStripMenuItem.Text = "Manage Student";
-            manageStudentToolStripMenuItem.Click += manageStudentToolStripMenuItem_Click;
             // 
             // manageIntructorToolStripMenuItem
             // 
             manageIntructorToolStripMenuItem.Name = "manageIntructorToolStripMenuItem";
             manageIntructorToolStripMenuItem.Size = new Size(137, 24);
             manageIntructorToolStripMenuItem.Text = "Manage Intructor";
-            manageIntructorToolStripMenuItem.Click += manageIntructorToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem1
             // 
             logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
             logOutToolStripMenuItem1.Size = new Size(74, 24);
             logOutToolStripMenuItem1.Text = "Log out";
-            logOutToolStripMenuItem1.Click += logOutToolStripMenuItem1_Click;
+            logOutToolStripMenuItem1.Click += logOutToolStripMenuItem1_Click_1;
             // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 673);
-            Controls.Add(mainPanel);
+            Controls.Add(menuStrip1);
             Font = new Font("Segoe UI", 12F);
+            IsMdiContainer = true;
             Margin = new Padding(4);
             Name = "DashboardForm";
             Text = "GradeManagementForm";
-            mainPanel.ResumeLayout(false);
-            mainPanel.PerformLayout();
+            FormClosing += DashboardForm_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ToolStripMenuItem logoutToolStripMenuItem;
-        private Panel mainPanel;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem manageDepartmentToolStripMenuItem;
         private ToolStripMenuItem manageSubjectToolStripMenuItem;
         private ToolStripMenuItem mangeScoreToolStripMenuItem;
         private ToolStripMenuItem manageStudentToolStripMenuItem;

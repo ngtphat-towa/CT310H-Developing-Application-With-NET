@@ -4,8 +4,8 @@ namespace StudentGradeManagement.Library.View
 {
     public interface IDashboardView : IBaseView
     {
+        event EventHandler? ShowDepartmentView;
+        event EventHandler? ShowCourseView;
         event EventHandler? LogoutEvent;
-        ILoginView LoginView { get; }
-        void setLoginView(ILoginView loginView);
     }
 }

@@ -11,10 +11,7 @@ namespace StudentGradeManagement.Desktop
             InitializeComponent();
         }
 
-        public void CloseView()
-        {
-            Application.Exit();
-        }
+
 
         public void ShowView()
         {
@@ -24,19 +21,12 @@ namespace StudentGradeManagement.Desktop
 
 
         public event EventHandler? LogoutEvent;
-        private static IDashboardView? _dashboardView;
-
-        public static IDashboardView? GetDashboardView()
-        {
-            if (_dashboardView == null || ((Form)_dashboardView).IsDisposed)
-            {
-                _dashboardView = new DashboardForm();
-            }
-            return _dashboardView;
-        }
+        public event EventHandler? ShowDepartmentView;
+        public event EventHandler? ShowCourseView;
 
         private void manageSubjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ShowCourseView?.Invoke(this, EventArgs.Empty);
 
         }
 
@@ -55,19 +45,20 @@ namespace StudentGradeManagement.Desktop
 
         }
 
-        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+
+        private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // TODO: Ask close or logout 
+        }
+
+        private void logOutToolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             LogoutEvent?.Invoke(this, EventArgs.Empty);
         }
 
-        private ILoginView? _loginView;
-        public ILoginView LoginView => _loginView ?? throw new ArgumentNullException(nameof(LoginView));
-
-        public void setLoginView(ILoginView loginView)
+        private void manageDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            _loginView = loginView;
+            ShowDepartmentView?.Invoke(this, EventArgs.Empty);
         }
-
-    
     }
 }

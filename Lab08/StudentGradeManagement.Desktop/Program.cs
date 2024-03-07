@@ -1,4 +1,7 @@
+using System.Windows.Forms;
+
 using StudentGradeManagement.Desktop.Presenter;
+using StudentGradeManagement.Desktop.Providers;
 using StudentGradeManagement.Library.Repositories;
 
 namespace StudentGradeManagement.Desktop
@@ -16,11 +19,11 @@ namespace StudentGradeManagement.Desktop
             ApplicationConfiguration.Initialize();
 
             
-            var loginView = new LoginForm();
+            var loginView = ViewProvider.GetLoginView();
            
             var intructorRepository = new InstructorRepository();
-            var loginPresenter = new LoginPresenter(loginView, intructorRepository);
-            loginPresenter.ShowView();
+            _ = new LoginPresenter(loginView, intructorRepository);
+            Application.Run((Form)loginView);
         }
     }
 }

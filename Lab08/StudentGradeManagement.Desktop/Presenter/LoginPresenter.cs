@@ -1,4 +1,5 @@
-﻿using StudentGradeManagement.Library.Model;
+﻿using StudentGradeManagement.Desktop.Providers;
+using StudentGradeManagement.Library.Model;
 using StudentGradeManagement.Library.Presenter;
 using StudentGradeManagement.Library.Repositories.Contracts;
 using StudentGradeManagement.Library.View;
@@ -52,18 +53,14 @@ namespace StudentGradeManagement.Desktop.Presenter
         }
         private void ShowDashboardView()
         {
-            _view.HideView();
-            var dashboardPresenter = new DashboardPresenter(_view.DashboardView!);
-            _view.DashboardView!.setLoginView(_view);
-            dashboardPresenter.ShowView();
+            ((Form)_view).Hide();
+            var dashboardView = ViewProvider.GetDashboardView();
+            _ = new DashboardPresenter(dashboardView);
+            dashboardView.ShowView();
         }
         private void OnClearClicked(object sender, EventArgs e)
         {
             _view.ClearFields();
-        }
-        public void ShowView()
-        {
-            _view.OpenView();
         }
     }
 }

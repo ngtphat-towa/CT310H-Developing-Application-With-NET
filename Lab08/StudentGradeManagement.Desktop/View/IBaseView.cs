@@ -3,6 +3,5 @@
     public interface IBaseView
     {
         void ShowView();
-        void CloseView();
     }
 }

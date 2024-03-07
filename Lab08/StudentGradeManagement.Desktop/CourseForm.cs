@@ -19,9 +19,9 @@ namespace StudentGradeManagement.Desktop.Subject
             InitializeComponent();
         }
 
-        public string CourseId { get => txtCourseId.Text; set => txtCourseId.Text=value; }
-        public string CourseName { get => txtCourseName.Text; set => txtCourseName.Text=value; }
-        public string DepartmentId { get => cbDepartment.SelectedValue?.ToString()!; set =>  cbDepartment.SelectedValue= value; }
+        public string CourseId { get => txtCourseId.Text; set => txtCourseId.Text = value; }
+        public string CourseName { get => txtCourseName.Text; set => txtCourseName.Text = value; }
+        public string DepartmentId { get => cbDepartment.SelectedValue?.ToString()!; set => cbDepartment.SelectedValue = value; }
         public int CreditNumber { get => (int)numCourseCredit.Value; set => numCourseCredit.Value = value; }
 
         public event EventHandler? SearchEvent;
@@ -51,6 +51,11 @@ namespace StudentGradeManagement.Desktop.Subject
         public void ShowView()
         {
             this.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

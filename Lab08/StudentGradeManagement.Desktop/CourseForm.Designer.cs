@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             tbMain = new TableLayoutPanel();
+            tbHeading = new TableLayoutPanel();
             label1 = new Label();
+            btnClose = new Button();
             gbSubjectList = new GroupBox();
             tbSubjectListFunction = new TableLayoutPanel();
             dgvSubjects = new DataGridView();
@@ -48,7 +50,9 @@
             cbDepartment = new ComboBox();
             numCourseCredit = new NumericUpDown();
             btnSave = new Button();
+            btnCancel = new Button();
             tbMain.SuspendLayout();
+            tbHeading.SuspendLayout();
             gbSubjectList.SuspendLayout();
             tbSubjectListFunction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSubjects).BeginInit();
@@ -62,7 +66,7 @@
             // 
             tbMain.ColumnCount = 1;
             tbMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tbMain.Controls.Add(label1, 0, 0);
+            tbMain.Controls.Add(tbHeading, 0, 0);
             tbMain.Controls.Add(gbSubjectList, 0, 2);
             tbMain.Controls.Add(gbSubjectDetailModule, 0, 1);
             tbMain.Dock = DockStyle.Fill;
@@ -73,31 +77,58 @@
             tbMain.RowStyles.Add(new RowStyle());
             tbMain.RowStyles.Add(new RowStyle());
             tbMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tbMain.Size = new Size(1075, 583);
+            tbMain.Size = new Size(1107, 583);
             tbMain.TabIndex = 0;
+            // 
+            // tbHeading
+            // 
+            tbHeading.ColumnCount = 2;
+            tbHeading.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tbHeading.ColumnStyles.Add(new ColumnStyle());
+            tbHeading.Controls.Add(label1, 0, 0);
+            tbHeading.Controls.Add(btnClose, 1, 0);
+            tbHeading.Dock = DockStyle.Top;
+            tbHeading.Location = new Point(3, 3);
+            tbHeading.Name = "tbHeading";
+            tbHeading.RowCount = 1;
+            tbHeading.RowStyles.Add(new RowStyle());
+            tbHeading.Size = new Size(1101, 47);
+            tbHeading.TabIndex = 6;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(4, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1067, 41);
-            label1.TabIndex = 0;
+            label1.Size = new Size(1029, 41);
+            label1.TabIndex = 1;
             label1.Text = "Mangage Course";
+            // 
+            // btnClose
+            // 
+            btnClose.Anchor = AnchorStyles.None;
+            btnClose.BackColor = SystemColors.ButtonFace;
+            btnClose.ForeColor = Color.Red;
+            btnClose.Location = new Point(1040, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(58, 41);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = false;
+            btnClose.Click += btnClose_Click;
             // 
             // gbSubjectList
             // 
             gbSubjectList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbSubjectList.AutoSize = true;
             gbSubjectList.Controls.Add(tbSubjectListFunction);
-            gbSubjectList.Location = new Point(4, 228);
+            gbSubjectList.Location = new Point(4, 240);
             gbSubjectList.Margin = new Padding(4);
             gbSubjectList.Name = "gbSubjectList";
             gbSubjectList.Padding = new Padding(4);
-            gbSubjectList.Size = new Size(1067, 351);
+            gbSubjectList.Size = new Size(1099, 339);
             gbSubjectList.TabIndex = 2;
             gbSubjectList.TabStop = false;
             gbSubjectList.Text = "Subject List";
@@ -116,7 +147,7 @@
             tbSubjectListFunction.Name = "tbSubjectListFunction";
             tbSubjectListFunction.RowCount = 1;
             tbSubjectListFunction.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tbSubjectListFunction.Size = new Size(1059, 319);
+            tbSubjectListFunction.Size = new Size(1091, 307);
             tbSubjectListFunction.TabIndex = 0;
             // 
             // dgvSubjects
@@ -127,7 +158,7 @@
             dgvSubjects.Margin = new Padding(4);
             dgvSubjects.Name = "dgvSubjects";
             dgvSubjects.RowHeadersWidth = 51;
-            dgvSubjects.Size = new Size(906, 311);
+            dgvSubjects.Size = new Size(934, 299);
             dgvSubjects.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -138,14 +169,14 @@
             tableLayoutPanel2.Controls.Add(btnEdit, 0, 1);
             tableLayoutPanel2.Controls.Add(btnAdd, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(918, 4);
+            tableLayoutPanel2.Location = new Point(946, 4);
             tableLayoutPanel2.Margin = new Padding(4);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 3;
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(137, 311);
+            tableLayoutPanel2.Size = new Size(141, 299);
             tableLayoutPanel2.TabIndex = 3;
             // 
             // btnDelete
@@ -155,7 +186,7 @@
             btnDelete.Location = new Point(4, 162);
             btnDelete.Margin = new Padding(4, 4, 4, 25);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(129, 50);
+            btnDelete.Size = new Size(133, 50);
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
@@ -167,7 +198,7 @@
             btnEdit.Location = new Point(4, 83);
             btnEdit.Margin = new Padding(4, 4, 4, 25);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(129, 50);
+            btnEdit.Size = new Size(133, 50);
             btnEdit.TabIndex = 1;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
@@ -179,7 +210,7 @@
             btnAdd.Location = new Point(4, 4);
             btnAdd.Margin = new Padding(4, 4, 4, 25);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(129, 50);
+            btnAdd.Size = new Size(133, 50);
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
@@ -189,11 +220,11 @@
             gbSubjectDetailModule.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbSubjectDetailModule.AutoSize = true;
             gbSubjectDetailModule.Controls.Add(tableLayoutPanel1);
-            gbSubjectDetailModule.Location = new Point(4, 45);
+            gbSubjectDetailModule.Location = new Point(4, 57);
             gbSubjectDetailModule.Margin = new Padding(4);
             gbSubjectDetailModule.Name = "gbSubjectDetailModule";
             gbSubjectDetailModule.Padding = new Padding(4);
-            gbSubjectDetailModule.Size = new Size(1067, 175);
+            gbSubjectDetailModule.Size = new Size(1099, 175);
             gbSubjectDetailModule.TabIndex = 3;
             gbSubjectDetailModule.TabStop = false;
             gbSubjectDetailModule.Text = "Course Details";
@@ -216,6 +247,7 @@
             tableLayoutPanel1.Controls.Add(cbDepartment, 3, 0);
             tableLayoutPanel1.Controls.Add(numCourseCredit, 3, 1);
             tableLayoutPanel1.Controls.Add(btnSave, 4, 0);
+            tableLayoutPanel1.Controls.Add(btnCancel, 4, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(4, 28);
             tableLayoutPanel1.Margin = new Padding(4);
@@ -223,14 +255,14 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(1059, 143);
+            tableLayoutPanel1.Size = new Size(1091, 143);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(435, 69);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(422, 73);
+            label4.Margin = new Padding(4);
             label4.Name = "label4";
             label4.Size = new Size(129, 25);
             label4.TabIndex = 6;
@@ -239,8 +271,8 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(4, 0);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(4, 4);
+            label2.Margin = new Padding(4);
             label2.Name = "label2";
             label2.Size = new Size(90, 25);
             label2.TabIndex = 0;
@@ -252,7 +284,7 @@
             txtCourseId.Location = new Point(131, 4);
             txtCourseId.Margin = new Padding(4);
             txtCourseId.Name = "txtCourseId";
-            txtCourseId.Size = new Size(296, 31);
+            txtCourseId.Size = new Size(283, 31);
             txtCourseId.TabIndex = 1;
             // 
             // txtCourseName
@@ -261,14 +293,14 @@
             txtCourseName.Location = new Point(131, 73);
             txtCourseName.Margin = new Padding(4);
             txtCourseName.Name = "txtCourseName";
-            txtCourseName.Size = new Size(296, 31);
+            txtCourseName.Size = new Size(283, 31);
             txtCourseName.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(4, 69);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(4, 73);
+            label3.Margin = new Padding(4);
             label3.Name = "label3";
             label3.Size = new Size(119, 25);
             label3.TabIndex = 3;
@@ -277,8 +309,8 @@
             // lbdDep
             // 
             lbdDep.AutoSize = true;
-            lbdDep.Location = new Point(435, 0);
-            lbdDep.Margin = new Padding(4, 0, 4, 0);
+            lbdDep.Location = new Point(422, 4);
+            lbdDep.Margin = new Padding(4);
             lbdDep.Name = "lbdDep";
             lbdDep.Size = new Size(107, 25);
             lbdDep.TabIndex = 4;
@@ -288,47 +320,60 @@
             // 
             cbDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cbDepartment.FormattingEnabled = true;
-            cbDepartment.Location = new Point(571, 3);
+            cbDepartment.Location = new Point(558, 3);
             cbDepartment.Name = "cbDepartment";
-            cbDepartment.Size = new Size(298, 33);
+            cbDepartment.Size = new Size(285, 33);
             cbDepartment.TabIndex = 5;
             // 
             // numCourseCredit
             // 
             numCourseCredit.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            numCourseCredit.Location = new Point(571, 72);
+            numCourseCredit.Location = new Point(558, 72);
             numCourseCredit.Margin = new Padding(3, 3, 3, 40);
             numCourseCredit.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numCourseCredit.Name = "numCourseCredit";
-            numCourseCredit.Size = new Size(298, 31);
+            numCourseCredit.Size = new Size(285, 31);
             numCourseCredit.TabIndex = 7;
             numCourseCredit.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnSave.AutoSize = true;
-            btnSave.Location = new Point(876, 4);
+            btnSave.Location = new Point(850, 4);
             btnSave.Margin = new Padding(4, 4, 4, 25);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(179, 40);
+            btnSave.Size = new Size(237, 40);
             btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnCancel.AutoSize = true;
+            btnCancel.Location = new Point(846, 69);
+            btnCancel.Margin = new Padding(0, 0, 0, 25);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(245, 40);
+            btnCancel.TabIndex = 10;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // CourseForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(1075, 583);
+            ClientSize = new Size(1107, 583);
             Controls.Add(tbMain);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+            MinimumSize = new Size(1125, 630);
             Name = "CourseForm";
             Text = "SubjectForm";
             tbMain.ResumeLayout(false);
             tbMain.PerformLayout();
+            tbHeading.ResumeLayout(false);
             gbSubjectList.ResumeLayout(false);
             gbSubjectList.PerformLayout();
             tbSubjectListFunction.ResumeLayout(false);
@@ -346,7 +391,6 @@
         #endregion
 
         private TableLayoutPanel tbMain;
-        private Label label1;
         private TableLayoutPanel tableLayoutPanel2;
         private GroupBox gbSubjectList;
         private GroupBox gbSubjectDetailModule;
@@ -367,5 +411,9 @@
         private Button btnSave;
         private DataGridViewTextBoxColumn departmentIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn sectionsDataGridViewTextBoxColumn;
+        private TableLayoutPanel tbHeading;
+        private Label label1;
+        private Button btnClose;
+        private Button btnCancel;
     }
 }

@@ -8,8 +8,6 @@ namespace StudentGradeManagement.Desktop
         public string InstructorId { get => txtInstructorId.Text; set => txtInstructorId.Text = value; }
         public string Password { get => txtPassword.Text; set => txtPassword.Text = value; }
 
-        public IDashboardView? DashboardView => DashboardForm.GetDashboardView();
-
         public LoginForm()
         {
             InitializeComponent();
