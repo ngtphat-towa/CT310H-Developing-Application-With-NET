@@ -87,6 +87,9 @@
     <Build Include="dbo\StoredProcedures\Class\spClass_Update.sql" />
     <Build Include="dbo\StoredProcedures\Class\spClass_Create.sql" />
     <Build Include="dbo\StoredProcedures\Intructor\spIntructor_GetSingle.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_Create.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StudentGradeManagement.Database.publish.xml" />

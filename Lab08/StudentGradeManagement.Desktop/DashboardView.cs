@@ -18,8 +18,6 @@ namespace StudentGradeManagement.Desktop
             this.Show();
         }
 
-
-
         public event EventHandler? LogoutEvent;
         public event EventHandler? ShowDepartmentView;
         public event EventHandler? ShowCourseView;
@@ -59,6 +57,11 @@ namespace StudentGradeManagement.Desktop
         private void manageDepartmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowDepartmentView?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void ShowMessage(string message)
+        {
+            throw new NotImplementedException();
         }
     }
 }

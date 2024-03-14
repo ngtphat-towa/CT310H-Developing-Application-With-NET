@@ -48,6 +48,11 @@ namespace StudentGradeManagement.Desktop.Subject
             dgvSubjects.DataSource = courseList;
         }
 
+        public void ShowMessage(string message)
+        {
+            throw new NotImplementedException();
+        }
+
         public void ShowView()
         {
             this.Show();
