@@ -4,20 +4,25 @@ using StudentGradeManagement.Library.View;
 
 namespace StudentGradeManagement.Desktop.Presenter
 {
-    public class DepartmentPresenter
+    public class ClassPresenter
     {
         // View - Services
-        private readonly IDepartmentView _view;
-        private readonly IBaseRepository<Department> _repository;
+        private readonly IClassView _view;
+        private readonly IBaseRepository<Class> _classRepository;
+        private readonly IBaseRepository<Department> _departmentRepository;
+
         // State values
         private readonly BindingSource _bindingSource;
+        private IEnumerable<Class>? _classes;
         private IEnumerable<Department>? _departments;
 
-        public DepartmentPresenter(IDepartmentView view,
-                                   IBaseRepository<Department> repository)
+        public ClassPresenter(IClassView view,
+                                   IBaseRepository<Class> classRepository,
+                                   IBaseRepository<Department> departmentRepository)
         {
             // DI
-            _repository = repository;
+            _departmentRepository = departmentRepository;
+            _classRepository = classRepository;
             _view = view;
             // Wire up event
             _view.AddNewEvent += _view_AddNewEvent;
@@ -28,68 +33,62 @@ namespace StudentGradeManagement.Desktop.Presenter
             _view.CancelEvent += _view_CancelEvent;
             // Data
             _bindingSource = [];
-            _view.SetDepartmentListBindingSource(_bindingSource);
+            _view.SetClassListBindingSource(_bindingSource);
 
             _ = initView();
         }
 
         private async Task initView()
         {
-            LoadBuildingList();
-
             await LoadDepartmentList();
 
+            await LoadClassList();
+
+        }
+
+        private async Task LoadClassList()
+        {
+            // Populate the Class data grid view
+            _classes = await _classRepository.GetAllAsync();
+            _bindingSource.DataSource = _classes;
         }
 
         private async Task LoadDepartmentList()
         {
-            // Populate the department data grid view
-            _departments = await _repository.GetAllAsync();
-            _bindingSource.DataSource = _departments;
-        }
-
-        private void LoadBuildingList()
-        {
             // Create a temporary list of buildings
-            var buildings = new List<dynamic>
-            {
-                new  { Id = 0, Name = "" },
-                new  { Id = 1, Name = "Building A" },
-                new { Id = 2, Name = "Building B" },
-                new { Id = 3, Name = "Building C" },
-                new { Id = 4, Name = "Main Building" }
-            };
+            _departments = await _departmentRepository.GetAllAsync();
 
             // Populate the building view
-            _view.PopulateBuildingBindingSource(new BindingSource(buildings, null));
+            _view.PopulateDepartmentBindingSource(new BindingSource(_departments, null));
         }
 
         private async void _view_SaveEvent(object? sender, EventArgs e)
         {
-            var model = new Department()
+            var model = new Class()
             {
+                ClassId = _view.ClassId,
+                ClassName = _view.ClassName,
                 DepartmentId = _view.DepartmentId,
-                DepartmentName = _view.DepartmentName,
-                Building = _view.Building
+                YearCode = _view.YearCode
             };
 
             // Check if it is a editing mode
             if (_view.IsEdit)
             {
-                // Update the department
+                // Update the Class
                 // TODO: validate model
-                await _repository.UpdateAsync(model);
-                _view.Message = "Department update succesfully";
+                await _classRepository.UpdateAsync(model);
+                _view.Message = "Class update succesfully";
                 _view.IsEdit = false;
             }
             else
             {
-                // Add new department
-                _view.Message = "Department add succesfully";
-                await _repository.CreateAsync(model);
+                // Add new Class
+                _view.Message = "Class add succesfully";
+                await _classRepository.CreateAsync(model);
 
             }
-            await LoadDepartmentList();
+            await LoadClassList();
             _view.ShowMessage(_view.Message);
             _view_CancelEvent(sender, e);
         }
@@ -97,9 +96,10 @@ namespace StudentGradeManagement.Desktop.Presenter
 
         private void _view_CancelEvent(object? sender, EventArgs e)
         {
+            _view.ClassId = "";
+            _view.ClassName = "";
             _view.DepartmentId = "";
-            _view.DepartmentName = "";
-            _view.Building = "";
+            _view.YearCode = "";
             _view.IsEdit = false;
         }
 
@@ -108,26 +108,26 @@ namespace StudentGradeManagement.Desktop.Presenter
             var searchValue = _view.SearchValue?.Trim();
             if (!string.IsNullOrWhiteSpace(searchValue))
             {
-                _departments = (await _repository.GetAllAsync())
-                        .Where(d => d.DepartmentName.Contains(searchValue));
-                _bindingSource.DataSource = _departments;
+                _classes = (await _classRepository.GetAllAsync())
+                        .Where(d => d.ClassName.Contains(searchValue));
+                _bindingSource.DataSource = _classes;
             }
             else
             {
-                await LoadDepartmentList();
+                await LoadClassList();
             }
         }
 
         private async void _view_DeleteEventAsync(object? sender, EventArgs e)
         {
-            var department = _bindingSource.Current as Department;
-            if (department != null)
+            var current = _bindingSource.Current as Class;
+            if (current != null)
             {
                 try
                 {
-                    await _repository.DeleteAsync(department.DepartmentId);
-                    _view.Message = "Department deleted successfully";
-                    await LoadDepartmentList();
+                    await _classRepository.DeleteAsync(current.ClassId);
+                    _view.Message = "Class deleted successfully";
+                    await LoadClassList();
                 }
                 catch (Exception ex)
                 {
@@ -136,7 +136,7 @@ namespace StudentGradeManagement.Desktop.Presenter
             }
             else
             {
-                _view.Message = "No department selected for deletion";
+                _view.Message = "No Class selected for deletion";
             }
 
             _view.ShowMessage(_view.Message);
@@ -144,10 +144,11 @@ namespace StudentGradeManagement.Desktop.Presenter
 
         private void _view_EditEvent(object? sender, EventArgs e)
         {
-            var model = (Department)_bindingSource.Current;
+            var model = (Class)_bindingSource.Current;
+            _view.ClassId = model.ClassId;
+            _view.ClassName = model.ClassName;
             _view.DepartmentId = model.DepartmentId;
-            _view.DepartmentName = model.DepartmentName;
-            _view.Building = model.Building;
+            _view.YearCode = model.YearCode?? "";
             _view.IsEdit = true;
         }
 

@@ -1,5 +1,3 @@
-using System.Windows.Forms;
-
 using StudentGradeManagement.Desktop.Presenter;
 using StudentGradeManagement.Desktop.Providers;
 using StudentGradeManagement.Library.Repositories;

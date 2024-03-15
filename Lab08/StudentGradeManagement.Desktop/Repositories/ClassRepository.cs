@@ -36,7 +36,7 @@ namespace StudentGradeManagement.Library.Repositories
 
         public Task UpdateAsync(Class entity)
         => DataAccessHelper.
-            ExecuteStoredProcedure<dynamic>(
+           ExecuteStoredProcedure(
             "spClass_Update",
             new
             {

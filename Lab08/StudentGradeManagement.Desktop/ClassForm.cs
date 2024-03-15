@@ -1,21 +1,23 @@
-﻿using StudentGradeManagement.Library.View;
+﻿
+using StudentGradeManagement.Library.View;
 
 namespace StudentGradeManagement.Desktop
 {
-    public partial class DepartmentForm : Form, IDepartmentView
+    public partial class ClassForm : Form, IClassView
     {
-        public DepartmentForm()
+        public ClassForm()
         {
             InitializeComponent();
         }
 
-        public string DepartmentId { get => txtDepartmentId.Text; set => txtDepartmentId.Text = value; }
-        public string DepartmentName { get => txtDepartmentName.Text; set => txtDepartmentName.Text = value; }
-        public string? Building { get => cbBuilding.SelectedValue!.ToString(); set => cbBuilding.SelectedValue = value; }
+        public string ClassId { get => txtClassId.Text; set => txtClassId.Text = value; }
+        public string ClassName { get => txtClassName.Text; set => txtClassName.Text = value; }
+        public string DepartmentId { get => cbDepartment.SelectedValue?.ToString()!; set => cbDepartment.SelectedValue = value; }
         public string SearchValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public bool IsEdit { get; set; }
         public bool IsSuccessful { get; set; }
         public string? Message { get; set; }
+        public string YearCode { get => this.txtYearCode.Text; set => this.txtYearCode.Text = value; }
 
         public event EventHandler? SearchEvent;
         public event EventHandler? AddNewEvent;
@@ -24,18 +26,17 @@ namespace StudentGradeManagement.Desktop
         public event EventHandler? SaveEvent;
         public event EventHandler? CancelEvent;
 
-        public void PopulateBuildingBindingSource(BindingSource buildings)
+        public void PopulateDepartmentBindingSource(BindingSource buildings)
         {
-            cbBuilding.DataSource = buildings;
-            cbBuilding.DisplayMember = "Name";
-            cbBuilding.ValueMember = "Name";
+            cbDepartment.DataSource = buildings;
+            cbDepartment.DisplayMember = "DepartmentName";
+            cbDepartment.ValueMember = "DepartmentId";
         }
 
-        public void SetDepartmentListBindingSource(BindingSource departments)
+        public void SetClassListBindingSource(BindingSource Classs)
         {
-            dgvDepartment.DataSource = departments;
+            dgvClass.DataSource = Classs;
         }
-
 
 
         public void ShowMessage(string message)
@@ -69,14 +70,18 @@ namespace StudentGradeManagement.Desktop
             AddNewEvent?.Invoke(this, e);
         }
 
-        private void dgvDepartment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvClass_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditEvent?.Invoke(this, e);
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DeleteEvent?.Invoke(this, e);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            CancelEvent?.Invoke(this, e);
         }
     }
 }

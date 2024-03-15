@@ -42,5 +42,23 @@ namespace StudentGradeManagement.Desktop.Providers
 
             return departmentView;
         }
+        public static ClassForm GetClassView(Form? parentForm = null)
+        {
+            var classView = new ClassForm();
+
+            // Set departmentView to fill the parent form
+            if (parentForm != null)
+            {
+                classView.MdiParent = parentForm;
+                classView.Dock = DockStyle.Fill;
+            }
+
+            // Hide minimize and maximize buttons, show only close button
+            classView.ControlBox = false;
+            classView.ShowInTaskbar = false;
+            classView.FormBorderStyle = FormBorderStyle.None;
+
+            return classView;
+        }
     }
 }

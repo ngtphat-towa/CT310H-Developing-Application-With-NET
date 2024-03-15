@@ -1,5 +1,4 @@
-﻿using StudentGradeManagement.Library.Repositories;
-using StudentGradeManagement.Library.View;
+﻿using StudentGradeManagement.Library.View;
 
 
 namespace StudentGradeManagement.Desktop
@@ -21,6 +20,7 @@ namespace StudentGradeManagement.Desktop
         public event EventHandler? LogoutEvent;
         public event EventHandler? ShowDepartmentView;
         public event EventHandler? ShowCourseView;
+        public event EventHandler? ShowClassView;
 
         private void manageSubjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -62,6 +62,11 @@ namespace StudentGradeManagement.Desktop
         public void ShowMessage(string message)
         {
             throw new NotImplementedException();
+        }
+
+        private void manageClassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowClassView?.Invoke(this, EventArgs.Empty);
         }
     }
 }

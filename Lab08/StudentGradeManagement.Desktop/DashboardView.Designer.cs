@@ -37,6 +37,7 @@
             manageStudentToolStripMenuItem = new ToolStripMenuItem();
             manageIntructorToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem1 = new ToolStripMenuItem();
+            manageClassToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, manageDepartmentToolStripMenuItem, manageSubjectToolStripMenuItem, mangeScoreToolStripMenuItem, manageStudentToolStripMenuItem, manageIntructorToolStripMenuItem, logOutToolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, manageDepartmentToolStripMenuItem, manageClassToolStripMenuItem, manageSubjectToolStripMenuItem, mangeScoreToolStripMenuItem, manageStudentToolStripMenuItem, manageIntructorToolStripMenuItem, logOutToolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1262, 28);
@@ -100,6 +101,13 @@
             logOutToolStripMenuItem1.Text = "Log out";
             logOutToolStripMenuItem1.Click += logOutToolStripMenuItem1_Click_1;
             // 
+            // manageClassToolStripMenuItem
+            // 
+            manageClassToolStripMenuItem.Name = "manageClassToolStripMenuItem";
+            manageClassToolStripMenuItem.Size = new Size(114, 24);
+            manageClassToolStripMenuItem.Text = "Manage Class";
+            manageClassToolStripMenuItem.Click += manageClassToolStripMenuItem_Click;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
@@ -129,5 +137,6 @@
         private ToolStripMenuItem manageStudentToolStripMenuItem;
         private ToolStripMenuItem manageIntructorToolStripMenuItem;
         private ToolStripMenuItem logOutToolStripMenuItem1;
+        private ToolStripMenuItem manageClassToolStripMenuItem;
     }
 }
