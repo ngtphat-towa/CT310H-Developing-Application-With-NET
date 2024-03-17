@@ -2,17 +2,23 @@
 
 namespace StudentGradeManagement.Desktop.Subject
 {
-    public partial class CourseForm : Form, ISubjectView
+    public partial class CourseForm : Form, ICourseView
     {
         public CourseForm()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
         public string CourseId { get => txtCourseId.Text; set => txtCourseId.Text = value; }
         public string CourseName { get => txtCourseName.Text; set => txtCourseName.Text = value; }
         public string DepartmentId { get => cbDepartment.SelectedValue?.ToString()!; set => cbDepartment.SelectedValue = value; }
         public int CreditNumber { get => (int)numCourseCredit.Value; set => numCourseCredit.Value = value; }
+
+        public string SearchValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool IsEdit { get; set; }
+        public bool IsSuccessful { get; set; }
+        public string? Message { get; set; }
 
         public event EventHandler? SearchEvent;
         public event EventHandler? AddNewEvent;
@@ -21,17 +27,13 @@ namespace StudentGradeManagement.Desktop.Subject
         public event EventHandler? SaveEvent;
         public event EventHandler? CancelEvent;
 
+
         public void CloseView()
         {
             this.Close();
         }
 
-        public void PopulateCourseListBindingSource(BindingSource departmentList)
-        {
-            cbDepartment.DataSource = departmentList;
-            cbDepartment.DisplayMember = "DepartmentName";
-            cbDepartment.ValueMember = "DepartmentId";
-        }
+
 
         public void SetCourseListBindingSource(BindingSource courseList)
         {
@@ -40,7 +42,7 @@ namespace StudentGradeManagement.Desktop.Subject
 
         public void ShowMessage(string message)
         {
-            throw new NotImplementedException();
+            MessageBox.Show(message);
         }
 
         public void ShowView()
@@ -48,9 +50,27 @@ namespace StudentGradeManagement.Desktop.Subject
             this.Show();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+
+        public void PopulateDepartmentListBindingSource(BindingSource departmentList)
         {
-            this.Close();
+            cbDepartment.DataSource = departmentList;
+            cbDepartment.DisplayMember = "DepartmentName";
+            cbDepartment.ValueMember = "DepartmentId";
         }
+
+
+        private void AssociateAndRaiseViewEvents()
+        {
+            btnClose.Click += (s, e) => this.Close();
+            btnSave.Click += (s, e) => SaveEvent?.Invoke(this, EventArgs.Empty);
+            btnCancel.Click += (s, e) => CancelEvent?.Invoke(this, EventArgs.Empty);
+            btnEdit.Click += (s, e) => EditEvent?.Invoke(this, EventArgs.Empty);
+            btnAdd.Click += (s, e) => AddNewEvent?.Invoke(this, EventArgs.Empty);
+            dgvSubjects.CellContentDoubleClick += (s, e) => EditEvent?.Invoke(this, e);
+            btnDelete.Click += (s, e) => DeleteEvent?.Invoke(this, EventArgs.Empty);
+        }
+
     }
+
 }
+

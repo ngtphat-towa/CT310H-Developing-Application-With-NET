@@ -117,18 +117,17 @@
             btnClose.TabIndex = 2;
             btnClose.Text = "X";
             btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
             // 
             // gbSubjectList
             // 
             gbSubjectList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             gbSubjectList.AutoSize = true;
             gbSubjectList.Controls.Add(tbSubjectListFunction);
-            gbSubjectList.Location = new Point(4, 240);
+            gbSubjectList.Location = new Point(4, 236);
             gbSubjectList.Margin = new Padding(4);
             gbSubjectList.Name = "gbSubjectList";
             gbSubjectList.Padding = new Padding(4);
-            gbSubjectList.Size = new Size(1099, 339);
+            gbSubjectList.Size = new Size(1099, 343);
             gbSubjectList.TabIndex = 2;
             gbSubjectList.TabStop = false;
             gbSubjectList.Text = "Subject List";
@@ -147,18 +146,21 @@
             tbSubjectListFunction.Name = "tbSubjectListFunction";
             tbSubjectListFunction.RowCount = 1;
             tbSubjectListFunction.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tbSubjectListFunction.Size = new Size(1091, 307);
+            tbSubjectListFunction.Size = new Size(1091, 311);
             tbSubjectListFunction.TabIndex = 0;
             // 
             // dgvSubjects
             // 
+            dgvSubjects.AllowUserToAddRows = false;
+            dgvSubjects.AllowUserToDeleteRows = false;
+            dgvSubjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSubjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSubjects.Dock = DockStyle.Fill;
             dgvSubjects.Location = new Point(4, 4);
             dgvSubjects.Margin = new Padding(4);
             dgvSubjects.Name = "dgvSubjects";
             dgvSubjects.RowHeadersWidth = 51;
-            dgvSubjects.Size = new Size(934, 299);
+            dgvSubjects.Size = new Size(934, 303);
             dgvSubjects.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -176,7 +178,7 @@
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
             tableLayoutPanel2.RowStyles.Add(new RowStyle());
-            tableLayoutPanel2.Size = new Size(141, 299);
+            tableLayoutPanel2.Size = new Size(141, 303);
             tableLayoutPanel2.TabIndex = 3;
             // 
             // btnDelete
@@ -224,7 +226,7 @@
             gbSubjectDetailModule.Margin = new Padding(4);
             gbSubjectDetailModule.Name = "gbSubjectDetailModule";
             gbSubjectDetailModule.Padding = new Padding(4);
-            gbSubjectDetailModule.Size = new Size(1099, 175);
+            gbSubjectDetailModule.Size = new Size(1099, 171);
             gbSubjectDetailModule.TabIndex = 3;
             gbSubjectDetailModule.TabStop = false;
             gbSubjectDetailModule.Text = "Course Details";
@@ -255,13 +257,13 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
-            tableLayoutPanel1.Size = new Size(1091, 143);
+            tableLayoutPanel1.Size = new Size(1091, 139);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(422, 73);
+            label4.Location = new Point(437, 69);
             label4.Margin = new Padding(4);
             label4.Name = "label4";
             label4.Size = new Size(129, 25);
@@ -284,22 +286,22 @@
             txtCourseId.Location = new Point(131, 4);
             txtCourseId.Margin = new Padding(4);
             txtCourseId.Name = "txtCourseId";
-            txtCourseId.Size = new Size(283, 31);
+            txtCourseId.Size = new Size(298, 31);
             txtCourseId.TabIndex = 1;
             // 
             // txtCourseName
             // 
             txtCourseName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtCourseName.Location = new Point(131, 73);
+            txtCourseName.Location = new Point(131, 69);
             txtCourseName.Margin = new Padding(4);
             txtCourseName.Name = "txtCourseName";
-            txtCourseName.Size = new Size(283, 31);
+            txtCourseName.Size = new Size(298, 31);
             txtCourseName.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(4, 73);
+            label3.Location = new Point(4, 69);
             label3.Margin = new Padding(4);
             label3.Name = "label3";
             label3.Size = new Size(119, 25);
@@ -309,7 +311,7 @@
             // lbdDep
             // 
             lbdDep.AutoSize = true;
-            lbdDep.Location = new Point(422, 4);
+            lbdDep.Location = new Point(437, 4);
             lbdDep.Margin = new Padding(4);
             lbdDep.Name = "lbdDep";
             lbdDep.Size = new Size(107, 25);
@@ -320,29 +322,30 @@
             // 
             cbDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             cbDepartment.FormattingEnabled = true;
-            cbDepartment.Location = new Point(558, 3);
+            cbDepartment.Location = new Point(573, 3);
             cbDepartment.Name = "cbDepartment";
-            cbDepartment.Size = new Size(285, 33);
+            cbDepartment.Size = new Size(300, 33);
             cbDepartment.TabIndex = 5;
             // 
             // numCourseCredit
             // 
             numCourseCredit.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            numCourseCredit.Location = new Point(558, 72);
+            numCourseCredit.Location = new Point(573, 68);
             numCourseCredit.Margin = new Padding(3, 3, 3, 40);
             numCourseCredit.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numCourseCredit.Name = "numCourseCredit";
-            numCourseCredit.Size = new Size(285, 31);
+            numCourseCredit.Size = new Size(300, 31);
             numCourseCredit.TabIndex = 7;
             numCourseCredit.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnSave.Location = new Point(850, 4);
-            btnSave.Margin = new Padding(4, 4, 4, 25);
+            btnSave.AutoSize = true;
+            btnSave.Location = new Point(876, 0);
+            btnSave.Margin = new Padding(0, 0, 0, 25);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(237, 40);
+            btnSave.Size = new Size(215, 40);
             btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -351,10 +354,10 @@
             // 
             btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnCancel.AutoSize = true;
-            btnCancel.Location = new Point(846, 69);
+            btnCancel.Location = new Point(876, 65);
             btnCancel.Margin = new Padding(0, 0, 0, 25);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(245, 40);
+            btnCancel.Size = new Size(215, 40);
             btnCancel.TabIndex = 10;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;

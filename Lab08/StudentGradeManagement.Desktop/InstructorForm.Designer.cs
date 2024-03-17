@@ -1,7 +1,6 @@
-﻿
-namespace StudentGradeManagement.Desktop
+﻿namespace StudentGradeManagement.Desktop
 {
-    partial class ClassForm
+    partial class InstructorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,49 +28,48 @@ namespace StudentGradeManagement.Desktop
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            btnClose = new Button();
             gbSubjectDetailModule = new GroupBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             label2 = new Label();
-            txtClassId = new TextBox();
-            txtClassName = new TextBox();
+            txtDepartmentId = new TextBox();
+            txtDepartmentName = new TextBox();
             label3 = new Label();
             lbdDep = new Label();
-            cbDepartment = new ComboBox();
+            cbBuilding = new ComboBox();
             btnCancel = new Button();
             btnSave = new Button();
-            label4 = new Label();
-            txtYearCode = new TextBox();
-            tbHeading = new TableLayoutPanel();
-            btnClose = new Button();
             tbMain = new TableLayoutPanel();
             gbSubjectList = new GroupBox();
             tbSubjectListFunction = new TableLayoutPanel();
-            dgvClass = new DataGridView();
+            dgvDepartment = new DataGridView();
             tableLayoutPanel2 = new TableLayoutPanel();
             btnDelete = new Button();
             btnEdit = new Button();
             btnAdd = new Button();
+            tbHeading = new TableLayoutPanel();
+            label1 = new Label();
             gbSubjectDetailModule.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            tbHeading.SuspendLayout();
             tbMain.SuspendLayout();
             gbSubjectList.SuspendLayout();
             tbSubjectListFunction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvClass).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDepartment).BeginInit();
             tableLayoutPanel2.SuspendLayout();
+            tbHeading.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // btnClose
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(4, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(1081, 41);
-            label1.TabIndex = 1;
-            label1.Text = "Mangage Class ";
+            btnClose.Anchor = AnchorStyles.None;
+            btnClose.BackColor = SystemColors.ButtonFace;
+            btnClose.ForeColor = Color.Red;
+            btnClose.Location = new Point(1092, 3);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(58, 41);
+            btnClose.TabIndex = 3;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = false;
             // 
             // gbSubjectDetailModule
             // 
@@ -85,7 +83,7 @@ namespace StudentGradeManagement.Desktop
             gbSubjectDetailModule.Size = new Size(1151, 162);
             gbSubjectDetailModule.TabIndex = 3;
             gbSubjectDetailModule.TabStop = false;
-            gbSubjectDetailModule.Text = "Class Details";
+            gbSubjectDetailModule.Text = "Department Details";
             // 
             // tableLayoutPanel1
             // 
@@ -97,15 +95,13 @@ namespace StudentGradeManagement.Desktop
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle());
             tableLayoutPanel1.Controls.Add(label2, 0, 0);
-            tableLayoutPanel1.Controls.Add(txtClassId, 1, 0);
-            tableLayoutPanel1.Controls.Add(txtClassName, 1, 1);
+            tableLayoutPanel1.Controls.Add(txtDepartmentId, 1, 0);
+            tableLayoutPanel1.Controls.Add(txtDepartmentName, 1, 1);
             tableLayoutPanel1.Controls.Add(label3, 0, 1);
             tableLayoutPanel1.Controls.Add(lbdDep, 2, 0);
-            tableLayoutPanel1.Controls.Add(cbDepartment, 3, 0);
+            tableLayoutPanel1.Controls.Add(cbBuilding, 3, 0);
             tableLayoutPanel1.Controls.Add(btnCancel, 4, 1);
             tableLayoutPanel1.Controls.Add(btnSave, 4, 0);
-            tableLayoutPanel1.Controls.Add(label4, 2, 1);
-            tableLayoutPanel1.Controls.Add(txtYearCode, 3, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(4, 28);
             tableLayoutPanel1.Margin = new Padding(4);
@@ -122,27 +118,27 @@ namespace StudentGradeManagement.Desktop
             label2.Location = new Point(4, 4);
             label2.Margin = new Padding(4);
             label2.Name = "label2";
-            label2.Size = new Size(75, 25);
+            label2.Size = new Size(130, 25);
             label2.TabIndex = 0;
-            label2.Text = "Class ID";
+            label2.Text = "Department ID";
             // 
-            // txtClassId
+            // txtDepartmentId
             // 
-            txtClassId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtClassId.Location = new Point(116, 4);
-            txtClassId.Margin = new Padding(4);
-            txtClassId.Name = "txtClassId";
-            txtClassId.Size = new Size(346, 31);
-            txtClassId.TabIndex = 1;
+            txtDepartmentId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtDepartmentId.Location = new Point(171, 4);
+            txtDepartmentId.Margin = new Padding(4);
+            txtDepartmentId.Name = "txtDepartmentId";
+            txtDepartmentId.Size = new Size(338, 31);
+            txtDepartmentId.TabIndex = 1;
             // 
-            // txtClassName
+            // txtDepartmentName
             // 
-            txtClassName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtClassName.Location = new Point(116, 69);
-            txtClassName.Margin = new Padding(4);
-            txtClassName.Name = "txtClassName";
-            txtClassName.Size = new Size(346, 31);
-            txtClassName.TabIndex = 2;
+            txtDepartmentName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtDepartmentName.Location = new Point(171, 69);
+            txtDepartmentName.Margin = new Padding(4);
+            txtDepartmentName.Name = "txtDepartmentName";
+            txtDepartmentName.Size = new Size(338, 31);
+            txtDepartmentName.TabIndex = 2;
             // 
             // label3
             // 
@@ -150,101 +146,52 @@ namespace StudentGradeManagement.Desktop
             label3.Location = new Point(4, 69);
             label3.Margin = new Padding(4);
             label3.Name = "label3";
-            label3.Size = new Size(104, 25);
+            label3.Size = new Size(159, 25);
             label3.TabIndex = 3;
-            label3.Text = "Class Name";
+            label3.Text = "Department Name";
             // 
             // lbdDep
             // 
             lbdDep.AutoSize = true;
-            lbdDep.Location = new Point(470, 4);
+            lbdDep.Location = new Point(517, 4);
             lbdDep.Margin = new Padding(4);
             lbdDep.Name = "lbdDep";
-            lbdDep.Size = new Size(107, 25);
+            lbdDep.Size = new Size(76, 25);
             lbdDep.TabIndex = 4;
-            lbdDep.Text = "Department";
+            lbdDep.Text = "Building";
             // 
-            // cbDepartment
+            // cbBuilding
             // 
-            cbDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cbDepartment.FormattingEnabled = true;
-            cbDepartment.Location = new Point(584, 3);
-            cbDepartment.Name = "cbDepartment";
-            cbDepartment.Size = new Size(348, 33);
-            cbDepartment.TabIndex = 5;
+            cbBuilding.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cbBuilding.FormattingEnabled = true;
+            cbBuilding.Location = new Point(600, 3);
+            cbBuilding.Name = "cbBuilding";
+            cbBuilding.Size = new Size(340, 33);
+            cbBuilding.TabIndex = 5;
             // 
             // btnCancel
             // 
             btnCancel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnCancel.AutoSize = true;
-            btnCancel.Location = new Point(935, 65);
+            btnCancel.Location = new Point(943, 65);
             btnCancel.Margin = new Padding(0, 0, 0, 25);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(208, 40);
+            btnCancel.Size = new Size(200, 40);
             btnCancel.TabIndex = 9;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += btnCancel_Click;
             // 
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnSave.AutoSize = true;
-            btnSave.Location = new Point(935, 0);
+            btnSave.Location = new Point(943, 0);
             btnSave.Margin = new Padding(0, 0, 0, 25);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(208, 40);
+            btnSave.Size = new Size(200, 40);
             btnSave.TabIndex = 8;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(470, 69);
-            label4.Margin = new Padding(4);
-            label4.Name = "label4";
-            label4.Size = new Size(88, 25);
-            label4.TabIndex = 4;
-            label4.Text = "Year code";
-            // 
-            // txtYearCode
-            // 
-            txtYearCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtYearCode.Location = new Point(585, 69);
-            txtYearCode.Margin = new Padding(4);
-            txtYearCode.Name = "txtYearCode";
-            txtYearCode.Size = new Size(346, 31);
-            txtYearCode.TabIndex = 2;
-            // 
-            // tbHeading
-            // 
-            tbHeading.ColumnCount = 2;
-            tbHeading.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tbHeading.ColumnStyles.Add(new ColumnStyle());
-            tbHeading.Controls.Add(btnClose, 0, 0);
-            tbHeading.Controls.Add(label1, 0, 0);
-            tbHeading.Dock = DockStyle.Top;
-            tbHeading.Location = new Point(3, 3);
-            tbHeading.Name = "tbHeading";
-            tbHeading.RowCount = 1;
-            tbHeading.RowStyles.Add(new RowStyle());
-            tbHeading.Size = new Size(1153, 47);
-            tbHeading.TabIndex = 4;
-            // 
-            // btnClose
-            // 
-            btnClose.Anchor = AnchorStyles.None;
-            btnClose.BackColor = SystemColors.ButtonFace;
-            btnClose.ForeColor = Color.Red;
-            btnClose.Location = new Point(1092, 3);
-            btnClose.Name = "btnClose";
-            btnClose.Size = new Size(58, 41);
-            btnClose.TabIndex = 3;
-            btnClose.Text = "X";
-            btnClose.UseVisualStyleBackColor = false;
-            btnClose.Click += btnClose_Click;
             // 
             // tbMain
             // 
@@ -276,7 +223,7 @@ namespace StudentGradeManagement.Desktop
             gbSubjectList.Size = new Size(1151, 352);
             gbSubjectList.TabIndex = 2;
             gbSubjectList.TabStop = false;
-            gbSubjectList.Text = "Class List";
+            gbSubjectList.Text = "Department List";
             // 
             // tbSubjectListFunction
             // 
@@ -284,7 +231,7 @@ namespace StudentGradeManagement.Desktop
             tbSubjectListFunction.ColumnCount = 2;
             tbSubjectListFunction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 86.3541641F));
             tbSubjectListFunction.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 13.645833F));
-            tbSubjectListFunction.Controls.Add(dgvClass, 0, 0);
+            tbSubjectListFunction.Controls.Add(dgvDepartment, 0, 0);
             tbSubjectListFunction.Controls.Add(tableLayoutPanel2, 1, 0);
             tbSubjectListFunction.Dock = DockStyle.Fill;
             tbSubjectListFunction.Location = new Point(4, 28);
@@ -295,22 +242,21 @@ namespace StudentGradeManagement.Desktop
             tbSubjectListFunction.Size = new Size(1143, 320);
             tbSubjectListFunction.TabIndex = 0;
             // 
-            // dgvClass
+            // dgvDepartment
             // 
-            dgvClass.AllowUserToAddRows = false;
-            dgvClass.AllowUserToDeleteRows = false;
-            dgvClass.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvClass.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClass.Dock = DockStyle.Fill;
-            dgvClass.Location = new Point(4, 4);
-            dgvClass.Margin = new Padding(4);
-            dgvClass.Name = "dgvClass";
-            dgvClass.ReadOnly = true;
-            dgvClass.RowHeadersWidth = 51;
-            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClass.Size = new Size(979, 312);
-            dgvClass.TabIndex = 2;
-            dgvClass.CellContentDoubleClick += dgvClass_CellContentDoubleClick;
+            dgvDepartment.AllowUserToAddRows = false;
+            dgvDepartment.AllowUserToDeleteRows = false;
+            dgvDepartment.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDepartment.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDepartment.Dock = DockStyle.Fill;
+            dgvDepartment.Location = new Point(4, 4);
+            dgvDepartment.Margin = new Padding(4);
+            dgvDepartment.Name = "dgvDepartment";
+            dgvDepartment.ReadOnly = true;
+            dgvDepartment.RowHeadersWidth = 51;
+            dgvDepartment.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDepartment.Size = new Size(979, 312);
+            dgvDepartment.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
@@ -341,7 +287,6 @@ namespace StudentGradeManagement.Desktop
             btnDelete.TabIndex = 2;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
@@ -354,7 +299,6 @@ namespace StudentGradeManagement.Desktop
             btnEdit.TabIndex = 1;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
-            btnEdit.Click += btnEdit_Click;
             // 
             // btnAdd
             // 
@@ -367,60 +311,82 @@ namespace StudentGradeManagement.Desktop
             btnAdd.TabIndex = 0;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
             // 
-            // ClassForm
+            // tbHeading
+            // 
+            tbHeading.ColumnCount = 2;
+            tbHeading.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tbHeading.ColumnStyles.Add(new ColumnStyle());
+            tbHeading.Controls.Add(btnClose, 0, 0);
+            tbHeading.Controls.Add(label1, 0, 0);
+            tbHeading.Dock = DockStyle.Top;
+            tbHeading.Location = new Point(3, 3);
+            tbHeading.Name = "tbHeading";
+            tbHeading.RowCount = 1;
+            tbHeading.RowStyles.Add(new RowStyle());
+            tbHeading.Size = new Size(1153, 47);
+            tbHeading.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(4, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(1081, 41);
+            label1.TabIndex = 1;
+            label1.Text = "Mangage Department";
+            // 
+            // InstructorForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1157, 583);
             Controls.Add(tbMain);
             Font = new Font("Segoe UI", 10.8F);
-            Margin = new Padding(4);
+            Margin = new Padding(4, 4, 4, 4);
             MinimumSize = new Size(1175, 630);
-            Name = "ClassForm";
-            Text = "ClassForm";
+            Name = "InstructorForm";
+            Text = "Intructor";
             gbSubjectDetailModule.ResumeLayout(false);
             gbSubjectDetailModule.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            tbHeading.ResumeLayout(false);
             tbMain.ResumeLayout(false);
             tbMain.PerformLayout();
             gbSubjectList.ResumeLayout(false);
             gbSubjectList.PerformLayout();
             tbSubjectListFunction.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvClass).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDepartment).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel2.PerformLayout();
+            tbHeading.ResumeLayout(false);
             ResumeLayout(false);
         }
 
-
         #endregion
 
-        private Label label1;
+        private Button btnClose;
         private GroupBox gbSubjectDetailModule;
         private TableLayoutPanel tableLayoutPanel1;
         private Label label2;
-        private TextBox txtClassId;
-        private TextBox txtClassName;
+        private TextBox txtDepartmentId;
+        private TextBox txtDepartmentName;
         private Label label3;
         private Label lbdDep;
-        private ComboBox cbDepartment;
+        private ComboBox cbBuilding;
         private Button btnCancel;
         private Button btnSave;
-        private TableLayoutPanel tbHeading;
-        private Button btnClose;
         private TableLayoutPanel tbMain;
         private GroupBox gbSubjectList;
         private TableLayoutPanel tbSubjectListFunction;
-        private DataGridView dgvClass;
+        private DataGridView dgvDepartment;
         private TableLayoutPanel tableLayoutPanel2;
         private Button btnDelete;
         private Button btnEdit;
         private Button btnAdd;
-        private Label label4;
-        private TextBox txtYearCode;
+        private TableLayoutPanel tbHeading;
+        private Label label1;
     }
 }

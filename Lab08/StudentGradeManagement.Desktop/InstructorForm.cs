@@ -1,8 +1,8 @@
 ﻿namespace StudentGradeManagement.Desktop
 {
-    public partial class Intructor : Form
+    public partial class InstructorForm : Form
     {
-        public Intructor()
+        public InstructorForm()
         {
             InitializeComponent();
         }

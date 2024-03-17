@@ -4,5 +4,5 @@ BEGIN
     SELECT cl.*,dp.DepartmentName 
         FROM dbo.Class cl
         JOIN Department dp
-        ON dp.DepartmentId = ClassId;
+        ON dp.DepartmentId = cl.DepartmentId;
 END;

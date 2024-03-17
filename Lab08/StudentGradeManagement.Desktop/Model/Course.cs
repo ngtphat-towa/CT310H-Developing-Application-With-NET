@@ -7,18 +7,23 @@ namespace StudentGradeManagement.Library.Model
     {
         [Key]
         [DisplayName("Course Id")]
-        public required string CourseId { get; set; }
+        public string CourseId { get; set; } = null!;
+
         [DisplayName("Course Name")]
         [Required(ErrorMessage = "Course name is requerid")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Pet name must be between 3 and 50 characters")]
-        public required string CourseName { get; set; }
+        public string CourseName { get; set; } = null!;
+
+        [DisplayName("Department Id")]
+        [Required(ErrorMessage = "Department name is requerid")]
+        public string DepartmentId { get; set; } = null!;
+
         [Browsable(false)]
-        public required string DepartmentId { get; set; }
-        [DisplayName("Pet Type")]
-        [Required(ErrorMessage = "Pet type is requerid")]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Pet type must be between 3 and 50 characters")]
         public Department? Department { get; set; }
+
+        [DisplayName("Credit Number")]
         public int CreditNumber { get; set; }
+
         [Browsable(false)]
         [DisplayName("Sections")]
         public ICollection<Section>? Sections { get; set; }

@@ -10,7 +10,6 @@
         event EventHandler? ClearClicked;
         // Functions
         void ClearFields();
-        void ShowMessage(string message);
   
     }
 

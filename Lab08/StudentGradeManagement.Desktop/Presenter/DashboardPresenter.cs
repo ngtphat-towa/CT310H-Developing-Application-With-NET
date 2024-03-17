@@ -1,6 +1,5 @@
 ﻿using StudentGradeManagement.Desktop.Presenter;
 using StudentGradeManagement.Desktop.Providers;
-using StudentGradeManagement.Desktop.Repositories;
 using StudentGradeManagement.Library.View;
 
 namespace StudentGradeManagement.Library.Presenter
@@ -15,7 +14,18 @@ namespace StudentGradeManagement.Library.Presenter
             _view.LogoutEvent += _view_LogoutEvent;
             _view.ShowDepartmentView += _view_ShowDepartmentView;
             _view.ShowClassView += _view_ShowClassView;
+            _view.ShowCourseView += _view_ShowCourseView;
 
+        }
+
+        private void _view_ShowCourseView(object? sender, EventArgs e)
+        {
+            var view = ViewProvider.GetCourseView((Form?)_view);
+            var courseRepository = RepositoryProvider.GetCourseRepository();
+            var departmentRepository = RepositoryProvider.GetDepartmentRepository();
+
+            _ = new CoursePresenter(view, courseRepository, departmentRepository);
+            view!.Show();
         }
 
         private void _view_ShowClassView(object? sender, EventArgs e)

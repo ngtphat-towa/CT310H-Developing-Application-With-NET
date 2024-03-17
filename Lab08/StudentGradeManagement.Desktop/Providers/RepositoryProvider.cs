@@ -2,7 +2,7 @@
 using StudentGradeManagement.Library.Repositories;
 using StudentGradeManagement.Library.Repositories.Contracts;
 
-namespace StudentGradeManagement.Desktop.Repositories
+namespace StudentGradeManagement.Desktop.Providers
 {
     public sealed class RepositoryProvider
     {
@@ -26,6 +26,17 @@ namespace StudentGradeManagement.Desktop.Repositories
             }
             _classRepository = new ClassRepository();
             return _classRepository;
+        }
+
+        private static IBaseRepository<Course>? _coursesRepository;
+        public static IBaseRepository<Course> GetCourseRepository()
+        {
+            if (_coursesRepository != null)
+            {
+                return _coursesRepository;
+            }
+            _coursesRepository = new CourseRepository();
+            return _coursesRepository;
         }
     }
 }

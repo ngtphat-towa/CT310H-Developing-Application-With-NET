@@ -28,22 +28,6 @@ namespace StudentGradeManagement.Desktop
 
         }
 
-        private void mangeScoreToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void manageStudentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void manageIntructorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // TODO: Ask close or logout 
@@ -68,5 +52,6 @@ namespace StudentGradeManagement.Desktop
         {
             ShowClassView?.Invoke(this, EventArgs.Empty);
         }
+
     }
 }

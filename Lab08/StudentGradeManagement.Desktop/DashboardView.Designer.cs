@@ -32,12 +32,12 @@
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             manageDepartmentToolStripMenuItem = new ToolStripMenuItem();
+            manageClassToolStripMenuItem = new ToolStripMenuItem();
             manageSubjectToolStripMenuItem = new ToolStripMenuItem();
             mangeScoreToolStripMenuItem = new ToolStripMenuItem();
             manageStudentToolStripMenuItem = new ToolStripMenuItem();
             manageIntructorToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem1 = new ToolStripMenuItem();
-            manageClassToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,11 +70,19 @@
             manageDepartmentToolStripMenuItem.Text = "Manage Department";
             manageDepartmentToolStripMenuItem.Click += manageDepartmentToolStripMenuItem_Click;
             // 
+            // manageClassToolStripMenuItem
+            // 
+            manageClassToolStripMenuItem.Name = "manageClassToolStripMenuItem";
+            manageClassToolStripMenuItem.Size = new Size(114, 24);
+            manageClassToolStripMenuItem.Text = "Manage Class";
+            manageClassToolStripMenuItem.Click += manageClassToolStripMenuItem_Click;
+            // 
             // manageSubjectToolStripMenuItem
             // 
             manageSubjectToolStripMenuItem.Name = "manageSubjectToolStripMenuItem";
             manageSubjectToolStripMenuItem.Size = new Size(130, 24);
             manageSubjectToolStripMenuItem.Text = "Manage Subject";
+            manageSubjectToolStripMenuItem.Click += manageSubjectToolStripMenuItem_Click;
             // 
             // mangeScoreToolStripMenuItem
             // 
@@ -100,13 +108,6 @@
             logOutToolStripMenuItem1.Size = new Size(74, 24);
             logOutToolStripMenuItem1.Text = "Log out";
             logOutToolStripMenuItem1.Click += logOutToolStripMenuItem1_Click_1;
-            // 
-            // manageClassToolStripMenuItem
-            // 
-            manageClassToolStripMenuItem.Name = "manageClassToolStripMenuItem";
-            manageClassToolStripMenuItem.Size = new Size(114, 24);
-            manageClassToolStripMenuItem.Text = "Manage Class";
-            manageClassToolStripMenuItem.Click += manageClassToolStripMenuItem_Click;
             // 
             // DashboardForm
             // 

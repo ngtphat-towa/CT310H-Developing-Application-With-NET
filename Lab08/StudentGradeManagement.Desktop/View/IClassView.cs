@@ -10,11 +10,6 @@ namespace StudentGradeManagement.Library.View
         string DepartmentId { get; set; } 
         string YearCode { get; set; } 
 
-        string SearchValue { get; set; }
-        bool IsEdit { get; set; }
-        bool IsSuccessful { get; set; }
-        string? Message { get; set; }
-
         //Methods
         void PopulateDepartmentBindingSource(BindingSource buildings);
         void SetClassListBindingSource(BindingSource Classs);

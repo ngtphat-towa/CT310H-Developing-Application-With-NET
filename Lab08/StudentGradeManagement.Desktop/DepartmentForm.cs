@@ -7,11 +7,12 @@ namespace StudentGradeManagement.Desktop
         public DepartmentForm()
         {
             InitializeComponent();
+            AssociateAndRaiseViewEvents();
         }
 
         public string DepartmentId { get => txtDepartmentId.Text; set => txtDepartmentId.Text = value; }
         public string DepartmentName { get => txtDepartmentName.Text; set => txtDepartmentName.Text = value; }
-        public string? Building { get => cbBuilding.SelectedValue!.ToString(); set => cbBuilding.SelectedValue = value; }
+        public string? Building { get => cbBuilding.SelectedValue?.ToString(); set => cbBuilding.SelectedValue = value; }
         public string SearchValue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public bool IsEdit { get; set; }
         public bool IsSuccessful { get; set; }
@@ -36,8 +37,6 @@ namespace StudentGradeManagement.Desktop
             dgvDepartment.DataSource = departments;
         }
 
-
-
         public void ShowMessage(string message)
         {
             MessageBox.Show(message);
@@ -48,35 +47,15 @@ namespace StudentGradeManagement.Desktop
             this.Show();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void AssociateAndRaiseViewEvents()
         {
-            this.Close();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            SaveEvent?.Invoke(this, EventArgs.Empty);
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            EditEvent?.Invoke(this, e);
-        }
-
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            AddNewEvent?.Invoke(this, e);
-        }
-
-        private void dgvDepartment_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            EditEvent?.Invoke(this, e);
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DeleteEvent?.Invoke(this, e);
+            btnClose.Click += (s, e) => this.Close();
+            btnSave.Click += (s, e) => SaveEvent?.Invoke(this, EventArgs.Empty);
+            btnCancel.Click += (s, e) => CancelEvent?.Invoke(this, EventArgs.Empty);
+            btnEdit.Click += (s, e) => EditEvent?.Invoke(this, EventArgs.Empty);
+            btnAdd.Click += (s, e) => AddNewEvent?.Invoke(this, EventArgs.Empty);
+            dgvDepartment.CellContentDoubleClick +=  (s, e) => EditEvent?.Invoke(this, e);
+            btnDelete.Click += (s, e) => DeleteEvent?.Invoke(this, EventArgs.Empty);
         }
     }
 }

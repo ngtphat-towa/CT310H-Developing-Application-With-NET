@@ -90,6 +90,11 @@
     <Build Include="dbo\StoredProcedures\Department\spDepartment_Create.sql" />
     <Build Include="dbo\StoredProcedures\Department\spDepartment_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Department\spDepartment_Update.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_Create.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_GetSingle.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StudentGradeManagement.Database.publish.xml" />
