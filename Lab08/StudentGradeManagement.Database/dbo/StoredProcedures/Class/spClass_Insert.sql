@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE dbo.spClass_Create
+﻿CREATE PROCEDURE dbo.spClass_Insert
     @ClassId VARCHAR(15),
     @ClassName NVARCHAR(50),
     @DepartmentId NVARCHAR(15),

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[spCourse_Create]
+﻿CREATE PROCEDURE [dbo].[spCourse_Insert]
     @CourseId     VARCHAR (10),
     @CourseName   NVARCHAR (50),
     @DepartmentId NVARCHAR (15),

@@ -64,7 +64,7 @@
     <Folder Include="dbo\StoredProcedures\Department" />
     <Folder Include="dbo\StoredProcedures\Class" />
     <Folder Include="dbo\StoredProcedures\Course" />
-    <Folder Include="dbo\StoredProcedures\Intructor" />
+    <Folder Include="dbo\StoredProcedures\Instructor" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Department.sql" />
@@ -85,16 +85,20 @@
     <Build Include="dbo\StoredProcedures\Class\spClass_GetSingle.sql" />
     <Build Include="dbo\StoredProcedures\Class\spClass_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Class\spClass_Update.sql" />
-    <Build Include="dbo\StoredProcedures\Class\spClass_Create.sql" />
-    <Build Include="dbo\StoredProcedures\Intructor\spIntructor_GetSingle.sql" />
-    <Build Include="dbo\StoredProcedures\Department\spDepartment_Create.sql" />
+    <Build Include="dbo\StoredProcedures\Class\spClass_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\Instructor\spIntructor_GetSingle.sql" />
+    <Build Include="dbo\StoredProcedures\Department\spDepartment_Insert.sql" />
     <Build Include="dbo\StoredProcedures\Department\spDepartment_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Department\spDepartment_Update.sql" />
-    <Build Include="dbo\StoredProcedures\Course\spCourse_Create.sql" />
+    <Build Include="dbo\StoredProcedures\Course\spCourse_Insert.sql" />
     <Build Include="dbo\StoredProcedures\Course\spCourse_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Course\spCourse_GetAll.sql" />
     <Build Include="dbo\StoredProcedures\Course\spCourse_GetSingle.sql" />
     <Build Include="dbo\StoredProcedures\Course\spCourse_Update.sql" />
+    <Build Include="dbo\StoredProcedures\Instructor\spInstructor_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\Instructor\spInstructor_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Instructor\spInstructor_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\Instructor\spInstructor_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="StudentGradeManagement.Database.publish.xml" />
