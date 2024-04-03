@@ -62,6 +62,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="Security\" />
     <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Customer.sql" />
@@ -69,5 +70,6 @@
     <Build Include="Security\lab_admin_1.sql" />
     <Build Include="dbo\Functions\checkEmail.sql" />
     <Build Include="dbo\Functions\isLegitDate.sql" />
+    <Build Include="dbo\Stored Procedures\InsertCustomer.sql" />
   </ItemGroup>
 </Project>
