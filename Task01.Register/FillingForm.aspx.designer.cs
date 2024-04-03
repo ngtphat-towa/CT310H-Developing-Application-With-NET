@@ -123,15 +123,6 @@ namespace Task01.Register
         protected global::System.Web.UI.WebControls.RadioButton radMale;
 
         /// <summary>
-        /// radFemale control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton radFemale;
-
-        /// <summary>
         /// cv_gender control.
         /// </summary>
         /// <remarks>
@@ -139,6 +130,15 @@ namespace Task01.Register
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator cv_gender;
+
+        /// <summary>
+        /// radFemale control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton radFemale;
 
         /// <summary>
         /// txtEmail control.
@@ -166,6 +166,15 @@ namespace Task01.Register
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIncome;
+
+        /// <summary>
+        /// rveIncome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rveIncome;
 
         /// <summary>
         /// rvIncome control.

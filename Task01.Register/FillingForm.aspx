@@ -80,9 +80,8 @@
                 <td class="auto-style2">Gender</td>
                 <td>
                     <asp:RadioButton ID="radMale" runat="server" Text="Male" GroupName="gender" OnCheckedChanged="radMale_CheckedChanged" />
-                    <asp:RadioButton ID="radFemale" runat="server" Text="Female" GroupName="gender" OnCheckedChanged="radFemale_CheckedChanged" />
-                    
-                    <asp:CustomValidator ID="cv_gender" runat="server" ErrorMessage="Gender can not be empty" OnServerValidate="cv_gender_ServerValidate" style="color: #FF0000">(*)</asp:CustomValidator>
+                    <asp:CustomValidator ID="cv_gender" runat="server" ErrorMessage="Gender can not be empty" OnServerValidate="cv_gender_ServerValidate" style="color: #FF0000">(*)</asp:CustomValidator                   
+                    <asp:RadioButton ID="radFemale" runat="server" Text="Female" GroupName="gender" OnCheckedChanged="radFemale_CheckedChanged" />  
                     
                 </td>
             </tr>
@@ -97,6 +96,7 @@
                 <td class="auto-style2">Income</td>
                 <td style="color: #FF0000">
                     <asp:TextBox ID="txtIncome" runat="server" Width="690px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rveIncome" runat="server" ControlToValidate="txtIncome" ErrorMessage="Income must be not empty">(*)</asp:RequiredFieldValidator>                    
                     <asp:RangeValidator ID="rvIncome" runat="server" ControlToValidate="txtIncome" ErrorMessage="Income from 1 million to 50 million vnd" MaximumValue="50000000" MinimumValue="1000000">(*)</asp:RangeValidator>
                 </td>
             </tr>
