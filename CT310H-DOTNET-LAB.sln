@@ -55,6 +55,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab11", "Lab11", "{CC0C850A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReCustomerRegister.WebForm", "Lab10\ReCustomerRegister.WebForm\ReCustomerRegister.WebForm.csproj", "{95861012-3B22-49EC-A802-8EB1DF8DF9E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab11_Student_Managment", "Lab11\Lab11_Student_Managment\Lab11_Student_Managment.csproj", "{D2987D5F-4D30-42CC-A483-D0906763072C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{95861012-3B22-49EC-A802-8EB1DF8DF9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95861012-3B22-49EC-A802-8EB1DF8DF9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95861012-3B22-49EC-A802-8EB1DF8DF9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2987D5F-4D30-42CC-A483-D0906763072C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2987D5F-4D30-42CC-A483-D0906763072C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2987D5F-4D30-42CC-A483-D0906763072C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2987D5F-4D30-42CC-A483-D0906763072C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -170,6 +176,7 @@ Global
 		{D443C007-0D7B-4BF7-8EB9-7C6747182950} = {A8C74A2A-79BC-48C6-984F-65B567763161}
 		{52D2DEF5-2258-4AE6-87D1-7304E02F6E5D} = {A8C74A2A-79BC-48C6-984F-65B567763161}
 		{95861012-3B22-49EC-A802-8EB1DF8DF9E2} = {A8C74A2A-79BC-48C6-984F-65B567763161}
+		{D2987D5F-4D30-42CC-A483-D0906763072C} = {CC0C850A-E813-468D-916A-0943790A0D1D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C472F062-E8BE-411F-9790-887A1D88BD17}
